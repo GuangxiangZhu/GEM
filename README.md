@@ -13,6 +13,8 @@ Put all the MATLAB script files in your MATLAB path.
 
 USAGE
 ===============
-    Directly run the m-file **GEM.m** in the directory. 
-    Example: do the following at the MATLAB command window:  
-'`'ChrMod_main(5,100)'`'
+Directly run the m-file **GEM.m** in the directory. 
+
+Example: do the following at the MATLAB command window:  
+
+```ChrMod_main(5,100)```
