@@ -11,10 +11,23 @@ Put all the MATLAB script files in your MATLAB path.
 ## USAGE
 Directly run the m-file **GEM.m** with parameters in the directory. 
 
-Example: do the following at the MATLAB command line:  
+* Example
+
+do the following at the MATLAB command line:  
 
 ```GEM(5E12,4,1E4,0,0)```
-*Parameters
+
+* Parameters
+
+First： $lambda_E$
+
+Second：
+
+Third：
+
+Four：
+
+Five：
 
 * Input data
 
