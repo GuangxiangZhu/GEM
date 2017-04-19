@@ -13,21 +13,20 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Example
 
-do the following at the MATLAB command line:  
+    do the following at the MATLAB command line:  
 
-```GEM(5E12,4,1E4,0,0)```
+    ```GEM(5E12,4,1E4,0)```
 
 * Parameters
 
-First： $lambda_E$
+    First： Energy coefficient. Default is 5E12.
 
-Second：
+    Second： Number of conformations. Default is 4.
 
-Third：
+    Third： maximum number of iterations. Default is 1E4.
 
-Four：
+    Four： Whether to perform parameter selection (1-yes, 0-no). Default is 0.
 
-Five：
 
 * Input data
 
