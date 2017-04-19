@@ -13,7 +13,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Example
 
-    do the following at the MATLAB command line:  
+    do the following at the MATLAB command line:  $$a_1$$
 
     ```GEM(5E12,4,1E4,0)```
 
@@ -23,9 +23,9 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     Second： Number of conformations. Default is 4.
 
-    Third： maximum number of iterations. Default is 1E4.
+    Third： Maximum number of iterations. Default is 1E4.
 
-    Four： Whether to perform parameter selection (1-yes, 0-no). Default is 0.
+    Four： Whether to perform parameter selection (1/0 indicates yes/no). Default is 0.
 
 
 * Input data
