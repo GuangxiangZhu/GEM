@@ -13,8 +13,25 @@ Put all the MATLAB script files in your MATLAB path.
 
 USAGE
 ===============
-Directly run the m-file **GEM.m** in the directory. 
+Directly run the m-file **GEM.m** with parameters in the directory. 
 
-Example: do the following at the MATLAB command window:  
+Example: do the following at the MATLAB command line:  
 
-```ChrMod_main(5,100)```
+```GEM(5E12,4,1E4,0,0)```
+
+Input data:
+
+Output data:
+
+NOTES
+===============
+This software was developed and tested on MATLAB R2010b/R2014b/2016a and Windows/Linux operating systems.
+
+
+CONTACTS
+===============
+Comments and bug-reports are also higly appreciated. 
+
+Guangxiang Zhu, Tsinghua University
+
+insmileworld@gmail.com
