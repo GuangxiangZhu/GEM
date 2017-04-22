@@ -15,7 +15,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     do the following at the MATLAB command line:  $$a_1$$
 
-    ```GEM(5E12,4,1E4,0)```
+    ```GEM(5E12,4,1E4)```
 
 * Parameters
 
@@ -25,12 +25,16 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     Third： Maximum number of iterations. Default is 1E4.
 
-    Four： Whether to perform parameter selection (1/0 indicates yes/no). Default is 0.
 
 
 * Input data
 
 * Output data
+
+* Parameter selection
+    The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
+    ```BayesParaSelect```
+    Note that, the parameter selection is time-consuming. Fortunately, the default setting is enough in general, which was argued in the paper of GEM.
 
 ## NOTES
 This software was developed and tested on MATLAB R2010b/R2014b/2016a and Windows/Linux operating systems.
