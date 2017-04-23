@@ -16,7 +16,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     do the following at the MATLAB command line: 
     
 
-    ```GEM('./X.txt','./loci.txt',5E12,4,1E4,0)```
+        ```GEM('./X.txt','./loci.txt',5E12,4,1E4,0)```
 
 * Parameters
 
