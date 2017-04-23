@@ -16,7 +16,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     do the following at the MATLAB command line: 
     
 
-	GEM('./X.txt','./loci.txt',5E12,4,1E4,0)
+		 GEM('./X.txt','./loci.txt',5E12,4,1E4,0)
 
 * Parameters
 
@@ -51,7 +51,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-	 BayesParaSelect(beginpara,endpara,real_volume)
+	 	 BayesParaSelect(beginpara,endpara,real_volume)
     
     beginpara & endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
