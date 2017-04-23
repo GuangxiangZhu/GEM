@@ -15,27 +15,45 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     do the following at the MATLAB command line:  $$a_1$$
 
-    ```GEM(5E12,4,1E4)```
+    ```GEM('./X.txt','./loci.txt',5E12,4,1E4,0)```
 
 * Parameters
 
-    First： Energy coefficient. Default is 5E12.
+    First: File name of Hi-C map. 
 
-    Second： Number of conformations. Default is 4.
+    Second: File name of genomic loci.
 
-    Third： Maximum number of iterations. Default is 1E4.
+    Third: Energy coefficient. Default is 5E12.
+    
+    Forth: Number of conformations. Default is 4.
+    
+    Fifth: Maximum number of iterations. Default is 1E4.
+    
+    Sixth: Whether to infer the latent function (1/0).
 
 
+* Input file
 
-* Input data
+    The input file of Hi-C map is a N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements in the matrix represent interaction frequencies of Hi-C map. Example: X.txt.
+    The input file of genomic loci is a 𝑁 × 1 matrix separated by the table delimiter. The elements in the matrix represent the sequence position of the genomic loci. Example: loci.txt.
 
-* Output data
+* Output information
+
+    The final total cost, data cost, energy cost and inferred latent funtion (optional) are shown.
+
+* Output file
+
+    structure.txt: The reconstructed chromatin structure, i.e., an ensemble of conformations (N × 3 × M matrix). M is the number of conformations.
 
 * Parameter selection
 
     The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-    ```BayesParaSelect```
+    ```BayesParaSelect(beginpara,endpara,real_volume)```
+    
+    beginpara & endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
+    
+    real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
     
     Note that, the parameter selection is time-consuming. Fortunately, the default setting is enough in general, which was argued in the paper of GEM.
 
