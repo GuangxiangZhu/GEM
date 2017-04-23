@@ -13,7 +13,8 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Example
 
-    do the following at the MATLAB command line:  $$a_1$$
+    do the following at the MATLAB command line: 
+    
 
     ```GEM('./X.txt','./loci.txt',5E12,4,1E4,0)```
 
@@ -34,9 +35,9 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Input file
 
-    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements in the matrix represent interaction frequencies of Hi-C map. Example: X.txt.
+    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of this matrix represent interaction frequencies of Hi-C map. Example: X.txt.
     
-    File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements in the matrix represent the sequence position of the genomic loci. Example: loci.txt.
+    File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements of this matrix represent the sequence position of the genomic loci. Example: loci.txt.
 
 * Output information
 
