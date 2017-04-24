@@ -35,13 +35,13 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Input file
 
-    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of this matrix represent interaction frequencies of Hi-C map. Example: X.txt.
+    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of it represent interaction frequencies of the Hi-C map. Example: X.txt.
     
-    File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements of this matrix represent the sequence position of the genomic loci. Example: loci.txt.
+    File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. Example: loci.txt.
 
 * Output information
 
-    The final total cost, data cost, energy cost and inferred latent funtion (optional) are shown.
+    Final total cost, data cost, energy cost and inferred latent funtion (optional).
 
 * Output file
 
@@ -53,11 +53,11 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
 	 	 BayesParaSelect(beginpara,endpara,real_volume)
     
-    beginpara & endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
+    beginpara and endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
     real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
     
-    Note that, the parameter selection is time-consuming. Fortunately, the default setting is enough in general, which was argued in the paper of GEM.
+    Condiering that the parameter selection is time-consuming, parameter selection is not always necessary. Fortunately, the default setting is enough in general, which is argued in the paper of GEM.
 
 ## NOTES
 This software was developed and tested on MATLAB R2010b/R2014b/2016a and Windows/Linux operating systems.
