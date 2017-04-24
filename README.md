@@ -41,11 +41,11 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
     File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. Example: loci.txt.
     
-    The example files (X.txt and loci.txt) contain normalized the Hi-C map and the genomic loci of chromosome 14 for 1Mb bins, which are derived from Yaffe et al. (http://compgenomics.weizmann.ac.il/tanay/?page_id=283).
+	The example files (X.txt and loci.txt) contain normalized the Hi-C map and the genomic loci of chromosome 14 for 1Mb bins, which are derived from Yaffe et al. (http://compgenomics.weizmann.ac.il/tanay/?page_id=283).
 
 * Output information
 
-    Final total cost, data cost, energy cost and inferred latent funtion (optional).
+	Final total cost, data cost, energy cost and inferred latent funtion (optional).
 
 * Output file
 
