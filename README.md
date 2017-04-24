@@ -55,10 +55,10 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, lambdaE, infer_latent)
+	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent)
     
 
-	begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
+	begin_para and end_para: Select parameters in the range of [5*10^begin_para, 5*10^end_para]. Default are 8 and 16. For example, if you set begin_para 8 and end_para 16, GEM will select the best parameter from [5E8,5E9,5E10,5E11,5E12,5E13,5E14,5E15,5E16].
 	
 	real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 or -2 to use the estimated value provided by GEM (-1 for human cell, -2 for yeast cell).
 
@@ -69,8 +69,6 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 	max_iter: Maximum number of iterations. Default is 1E4.
     	
 	M: Number of conformations. Default is 4.
-	
-	lambdaE: Energy coefficient. Default is 5E12.
 	
 	infer_latent: Whether to infer the latent function (1/0).
     
