@@ -59,8 +59,8 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
     begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
-    real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
-    
+    real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 or -2 to use the estimated value provided by GEM (-1 for human cell, -2 for yeast cell).
+    
     HiC_file: File name of Hi-C map. 
 
     loci_file: File name of genomic loci.
