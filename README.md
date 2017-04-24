@@ -57,7 +57,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
     real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
     
-    Condiering that the parameter selection is time-consuming, parameter selection is not always necessary. Fortunately, the default setting is enough in general, which is argued in the paper of GEM.
+    Considering that the parameter selection is time-consuming, intact automatical parameter selection is not always necessary. Fortunately, the default setting is good enough in general, which is argued in the paper of GEM. Also, users can fine-tune the default setting of parameters according to the output data cost and energy cost.
 
 ## NOTES
 This software was developed and tested on MATLAB R2010b/R2014b/2016a and Windows/Linux operating systems.
