@@ -39,7 +39,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of it represent interaction frequencies of the Hi-C map. Example: X.txt.
     
-    File of genomic loci: A 𝑁 × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. Example: loci.txt.
+    File of genomic loci: A N × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. Example: loci.txt.
     
 	The example files (X.txt and loci.txt) contain normalized the Hi-C map and the genomic loci of chromosome 14 for 1Mb bins, which are derived from Yaffe et al. (http://compgenomics.weizmann.ac.il/tanay/?page_id=283).
 
@@ -50,6 +50,8 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 * Output file
 
     structure.txt: The reconstructed chromatin structure, i.e., an ensemble of conformations (N × 3 × M matrix). M is the number of conformations.
+    
+    proportions.txt: The corresponding weights of conformations (M × 1 matrix).
 
 * Parameter selection
 
@@ -58,7 +60,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent)
     
 
-	begin_para and end_para: Select parameters in the range of [5*10^begin_para, 5*10^end_para]. Default are 8 and 16. For example, if you set begin_para 8 and end_para 16, GEM will select the best parameter from [5E8,5E9,5E10,5E11,5E12,5E13,5E14,5E15,5E16].
+	begin_para and end_para: Select parameters in the range of [5×10^begin_para, 5×10^end_para]. Default are 8 and 16. For example, if you set begin_para 8 and end_para 16, GEM will select the best parameter from [5E8,5E9,5E10,5E11,5E12,5E13,5E14,5E15,5E16].
 	
 	real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 or -2 to use the estimated value provided by GEM (-1 for human cell, -2 for yeast cell).
 
