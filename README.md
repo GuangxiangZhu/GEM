@@ -20,17 +20,19 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Parameters
 
-    First: File name of Hi-C map. 
+		GEM(HiC_file,loci_file,lambdaE,M,max_iter,infer_latent)
 
-    Second: File name of genomic loci.
+    HiC_file: File name of Hi-C map. 
 
-    Third: Energy coefficient. Default is 5E12.
+    loci_file: File name of genomic loci.
+
+    lambdaE: Energy coefficient. Default is 5E12.
     
-    Forth: Number of conformations. Default is 4.
+    M: Number of conformations. Default is 4.
     
-    Fifth: Maximum number of iterations. Default is 1E4.
+    max_iter: Maximum number of iterations. Default is 1E4.
     
-    Sixth: Whether to infer the latent function (1/0).
+    infer_latent: Whether to infer the latent function (1/0).
 
 
 * Input file
@@ -51,11 +53,23 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-	 	 BayesParaSelect(beginpara,endpara,real_volume)
+	 	 BayesParaSelect(begin_para,end_para,real_volume,HiC_file,loci_file,lambdaE,M,max_iter,infer_latent)
     
     beginpara and endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
     real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
+    
+    HiC_file: File name of Hi-C map. 
+
+    loci_file: File name of genomic loci.
+
+    lambdaE: Energy coefficient. Default is 5E12.
+    
+    M: Number of conformations. Default is 4.
+    
+    max_iter: Maximum number of iterations. Default is 1E4.
+    
+    infer_latent: Whether to infer the latent function (1/0).
     
     Considering that the parameter selection is time-consuming, intact automatical parameter selection is not always necessary. Fortunately, the default setting is good enough in general, which is argued in the paper of GEM. Also, users can fine-tune the default setting of parameters according to the output data cost and energy cost.
 
