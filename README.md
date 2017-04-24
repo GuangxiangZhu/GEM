@@ -55,7 +55,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
 	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, lambdaE, M, max_iter, infer_latent)
     
-    beginpara and endpara: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
+    begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
     real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 to use the estimated value provided by GEM. 
     
