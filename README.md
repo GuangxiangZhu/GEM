@@ -20,17 +20,17 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Parameters
 
-		GEM(HiC_file, loci_file, lambdaE, M, max_iter, infer_latent)
+		GEM(HiC_file, loci_file, max_iter, M, lambdaE, infer_latent)
 
     HiC_file: File name of Hi-C map. 
 
     loci_file: File name of genomic loci.
 
-    lambdaE: Energy coefficient. Default is 5E12.
+    max_iter: Maximum number of iterations. Default is 1E4.
     
     M: Number of conformations. Default is 4.
     
-    max_iter: Maximum number of iterations. Default is 1E4.
+    lambdaE: Energy coefficient. Default is 5E12.
     
     infer_latent: Whether to infer the latent function (1/0).
 
@@ -55,7 +55,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     The energy coefficient depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, lambdaE, M, max_iter, infer_latent)
+	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, lambdaE, infer_latent)
     
     begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
     
@@ -65,11 +65,11 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     loci_file: File name of genomic loci.
 
-    lambdaE: Energy coefficient. Default is 5E12.
+    max_iter: Maximum number of iterations. Default is 1E4.
     
     M: Number of conformations. Default is 4.
     
-    max_iter: Maximum number of iterations. Default is 1E4.
+    lambdaE: Energy coefficient. Default is 5E12.
     
     infer_latent: Whether to infer the latent function (1/0).
     
