@@ -57,21 +57,22 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
 	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, lambdaE, infer_latent)
     
-    begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
-    
-    real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 or -2 to use the estimated value provided by GEM (-1 for human cell, -2 for yeast cell).
+
+	begin_para and end_para: Select parameters in the range of [beginpara, endpara]. Default is [5E8, 5E16].
+	
+	real_volume: Real volume of the chromatin. If you do not have the priori information of the real volume, you can set real_volume -1 or -2 to use the estimated value provided by GEM (-1 for human cell, -2 for yeast cell).
 
 	HiC_file: File name of Hi-C map. 
-
-    loci_file: File name of genomic loci.
-
-    max_iter: Maximum number of iterations. Default is 1E4.
-    
-    M: Number of conformations. Default is 4.
-    
-    lambdaE: Energy coefficient. Default is 5E12.
-    
-    infer_latent: Whether to infer the latent function (1/0).
+	
+	loci_file: File name of genomic loci.
+	
+	max_iter: Maximum number of iterations. Default is 1E4.
+    	
+	M: Number of conformations. Default is 4.
+	
+	lambdaE: Energy coefficient. Default is 5E12.
+	
+	infer_latent: Whether to infer the latent function (1/0).
     
     Considering that the parameter selection is time-consuming, intact automatical parameter selection is not always necessary. Fortunately, the default setting is good enough in general, which is argued in the paper of GEM. Also, users can fine-tune the default setting of parameters according to the output data cost and energy cost.
 
