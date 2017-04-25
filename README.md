@@ -49,7 +49,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Output file
 
-    structure.txt: The reconstructed chromatin structure, i.e., an ensemble of conformations (N × 3 × M matrix). M is the number of conformations.
+    conformation[1-M].txt: The reconstructed chromatin conformation 1-M. Each conformation is a N × 3 matrix. 
     
     proportions.txt: The corresponding weights of conformations (M × 1 matrix).
 
