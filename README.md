@@ -55,7 +55,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Parameter selection
 
-    The coefficient of energy term depends on how much the users concentrate on energy stability. It is a trade-off between spatial constraint from Hi-C data and energy restriction. Users can set the parameter according to their emphasized aspect. Additionally, there are alternative ways to select the parameter automatically, such as Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
+    The coefficient of energy term determines a trade-off between the fitness to the spatial constraint derived from Hi-C data and structural feasibility measured by the conformational energy. Users can set the parameter according to their emphasized aspects. Alternatively, this parameter can be determined by two automatic method, Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
 	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent)
     
