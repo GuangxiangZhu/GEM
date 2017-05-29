@@ -69,11 +69,5 @@ end
 disp('=================================================================');
 
 
-Fdata=[0,0,0];
-for m=1:M
-    Fdata(1)=Fdata(1)+proportions(m)*sqrt(sum((structure(5,:,m)-structure(50,:,m)).^2));
-    Fdata(2)=Fdata(2)+proportions(m)*sqrt(sum((structure(28,:,m)-structure(50,:,m)).^2));
-    Fdata(3)=Fdata(3)+proportions(m)*sqrt(sum((structure(28,:,m)-structure(69,:,m)).^2));
-end
 
 end
