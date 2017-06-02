@@ -1,4 +1,4 @@
-function [ ] = BayesParaSelect( begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent )
+function [ ] = BayesParaSelect( begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent,input_sizepara )
 
 % Parameter selection based on Bayesian approach
 
@@ -13,7 +13,7 @@ function [ ] = BayesParaSelect( begin_para, end_para, real_volume, HiC_file, loc
 % M: Number of conformations.
 % lambdaE: Energy coefficient.
 % infer_latent: Whether to infer the latent function (1/0).
-
+% input_sizepara: Packing density provided by user. -1 means using the estimated value by GEM.  
 
 % v0: The real volume from user input or estimated by GEM
 loci=load(loci_file);
@@ -29,7 +29,7 @@ end
 
 score_best=0;
 for para=begin_para:end_para
-    [structure_tmp,proportions_tmp,C_tmp,C1_tmp,C2_tmp]=GEMpara(HiC_file,loci_file,max_iter,M,5*10^para);
+    [structure_tmp,proportions_tmp,C_tmp,C1_tmp,C2_tmp]=GEMpara(HiC_file,loci_file,max_iter,M,5*10^para,input_sizepara);
     socre_tmp=BayesianScore( structure_tmp,proportions_tmp,C1_tmp,v0 );
     if socre_tmp > score_best
         score_best=socre_tmp;
