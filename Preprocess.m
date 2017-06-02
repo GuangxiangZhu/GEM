@@ -1,4 +1,4 @@
-function [ X,loci,sizepara ,index] = Preprocess(HiC_file,loci_file，input_sizepara)
+function [ X,loci,sizepara ,index] = Preprocess(HiC_file,loci_file,input_sizepara)
 
 % Data Preprocess before modeling.
 
