@@ -1,4 +1,4 @@
-function [ X,loci,sizepara ,index] = Preprocess(HiC_file,loci_file)
+function [ X,loci,sizepara ,index] = Preprocess(HiC_file,loci_file，input_sizepara)
 
 % Data Preprocess before modeling.
 
@@ -17,6 +17,9 @@ mass_density=[10E3,50E3,100E3,250E3,500E3,1E6]./([10E3,50E3,100E3,250E3,500E3,1E
 commonres=mode(delt);
 sizepara=mass_density(ResolutionMap(commonres));
 
+if input_sizepara > 0
+    sizepara=input_sizepara;
+end
 % Build the "beads-on-a-string" model for the uninformed long sequences
 if mass_density(ResolutionMap(delt(1)))>sizepara
     i=1;
