@@ -1,4 +1,4 @@
-function []=GEM(HiC_file,loci_file,max_iter,M,lambdaE,infer_latent)
+function []=GEM(HiC_file,loci_file,max_iter,M,lambdaE,infer_latent,input_sizepara)
 
 % ----------------------- Overview ------------------------ %
 % Main function for GEM                                     %
@@ -9,6 +9,8 @@ function []=GEM(HiC_file,loci_file,max_iter,M,lambdaE,infer_latent)
 % M: Number of conformations                                %
 % lambdaE: Energy coefficient                               %
 % infer_latent: Whether to infer the latent function (1/0)  %
+% input_sizepara: Packing density provided by user.         %
+%                 -1 means using the estimated value.       %
 % --------------------------------------------------------- %
 
 
@@ -20,7 +22,7 @@ function []=GEM(HiC_file,loci_file,max_iter,M,lambdaE,infer_latent)
 % sizepara: Packing density                                 %
 % index: The index of the genomic loci of interest          %
 % --------------------------------------------------------- %
-[ X,loci,sizepara,index ] = Preprocess(HiC_file,loci_file);
+[ X,loci,sizepara,index ] = Preprocess(HiC_file,loci_file,input_sizepara);
 
 
 % ---------------------- Optimizer ------------------------ %
