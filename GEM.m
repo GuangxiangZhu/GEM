@@ -10,7 +10,7 @@ function []=GEM(HiC_file,loci_file,max_iter,M,lambdaE,infer_latent,input_sizepar
 % lambdaE: Energy coefficient                               %
 % infer_latent: Whether to infer the latent function (1/0)  %
 % input_sizepara: Packing density provided by user.         %
-%                 -1 means using the estimated value.       %
+%               -1 means using the estimated value by GEM.  %
 % --------------------------------------------------------- %
 
 
