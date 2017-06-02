@@ -16,11 +16,11 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     do the following at the MATLAB command line: 
     
 
-		 GEM('./HiC.txt', './loci.txt', 1E4, 4, 5E12, 0)
+		 GEM('./HiC.txt', './loci.txt', 1E4, 4, 5E12, 0,-1)
 
 * Parameters
 
-		GEM(HiC_file, loci_file, max_iter, M, lambdaE, infer_latent)
+		GEM(HiC_file, loci_file, max_iter, M, lambdaE, infer_latent,input_sizepara)
 
     HiC_file: File name of Hi-C map. 
 
@@ -33,6 +33,8 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     lambdaE: Coefficient of energy term. Default is 5E12.
     
     infer_latent: Whether to infer the latent function (1/0).
+    
+    input_sizepara: Packing density of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
 
 
 * Input file
@@ -57,7 +59,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
     The coefficient of energy term determines a trade-off between the fitness to the spatial constraint derived from Hi-C data and structural feasibility measured by the conformational energy. Users can set the parameter according to their emphasized aspects. Alternatively, this parameter can be determined by two automatic method, Bayesian approach and TOPSIS. We provide the implement of Bayesian approach here. If you desire better parameters, implement Bayesian parameter selection by inputting the following at the MATLAB command line:
     
-	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent)
+	 	 BayesParaSelect(begin_para, end_para, real_volume, HiC_file, loci_file, max_iter, M, infer_latent,input_sizepara)
     
 
 	begin_para and end_para: Select parameters in the range of [5×10^begin_para, 5×10^end_para]. Default are 8 and 16. For example, if you set begin_para 8 and end_para 16, GEM will select the best parameter from [5E8,5E9,5E10,5E11,5E12,5E13,5E14,5E15,5E16].
@@ -73,6 +75,8 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 	M: Number of conformations. Default is 4.
 	
 	infer_latent: Whether to infer the latent function (1/0).
+	
+	input_sizepara: Packing density of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
     
     Considering that the parameter selection is time-consuming, intact automatical parameter selection is not always necessary. Fortunately, the default setting is good enough in general, which is argued in the paper of GEM. Also, users can fine-tune the default setting of parameters according to the output data cost and energy cost.
 
