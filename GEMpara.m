@@ -1,4 +1,4 @@
-function [structure,proportions,C,C1,C2]=GEM(HiC_file,loci_file,max_iter,M,lambdaE)
+function [structure,proportions,C,C1,C2]=GEM(HiC_file,loci_file,max_iter,M,lambdaE,input_sizepara)
 
 % ----------------------- Overview ------------------------ %
 % Implement of GEM for parameter selection                  %
@@ -8,8 +8,9 @@ function [structure,proportions,C,C1,C2]=GEM(HiC_file,loci_file,max_iter,M,lambd
 % max_iter: Maximum number of iterations                    %
 % M: Number of conformations                                %
 % lambdaE: Energy coefficient                               %
+% input_sizepara: Packing density provided by user.         %
+%               -1 means using the estimated value by GEM.  %
 % --------------------------------------------------------- %
-
 
 % ---------------------- Preproccess ---------------------- %
 % Data Preprocess before modeling.                          %
@@ -19,7 +20,7 @@ function [structure,proportions,C,C1,C2]=GEM(HiC_file,loci_file,max_iter,M,lambd
 % sizepara: Packing density                                 %
 % index: The index of the genomic loci of interest          %
 % --------------------------------------------------------- %
-[ X,loci,sizepara,index ] = Preprocess(HiC_file,loci_file);
+[ X,loci,sizepara,index ] = Preprocess(HiC_file,loci_file,input_sizepara);
 
 
 % ---------------------- Optimizer ------------------------ %
