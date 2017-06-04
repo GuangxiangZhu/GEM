@@ -34,7 +34,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
     
     infer_latent: Whether to infer the latent function (1/0).
     
-    input_sizepara: Packing density of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
+    input_sizepara: Packing density (bp/nm) of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
 
 
 * Input file
@@ -76,7 +76,7 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 	
 	infer_latent: Whether to infer the latent function (1/0).
 	
-	input_sizepara: Packing density of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
+	input_sizepara: Packing density (bp/nm) of one fragment provided by user. Default is -1, which means using the estimated value by GEM. 
     
     Considering that the parameter selection is time-consuming, intact automatical parameter selection is not always necessary. Fortunately, the default setting is good enough in general, which is argued in the paper of GEM. Also, users can fine-tune the default setting of parameters according to the output data cost and energy cost.
 
