@@ -39,9 +39,9 @@ Directly run the m-file **GEM.m** with parameters in the directory.
 
 * Input file
 
-    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of it represent interaction frequencies of the Hi-C map. Example: HiC.txt.
+    File of Hi-C map: A N × N (N is the number of genomic loci) symmetric matrix separated by the table delimiter. The elements of it represent interaction frequencies of the Hi-C map. Example file: HiC.txt.
     
-    File of genomic loci: A N × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. Example: loci.txt.
+    File of genomic loci: A N × 1 matrix separated by the table delimiter. The elements of it represent the sequence position of the genomic loci. The fragement length between two genomic loci is equal to the resolution (e.g., 10kb, 50kb or 100kb) of the Hi-C data. Example file: loci.txt.
     
 	The example files (HiC.txt and loci.txt) contain normalized the Hi-C map and the genomic loci of chromosome 14 for 1Mb bins, which are derived from Yaffe et al. (http://compgenomics.weizmann.ac.il/tanay/?page_id=283).
 
