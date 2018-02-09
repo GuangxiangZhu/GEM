@@ -21,7 +21,7 @@ if input_sizepara > 0
     sizepara=input_sizepara;
 end
 % Build the "beads-on-a-string" model for the uninformed long sequences
-if mass_density(ResolutionMap(delt(1)))>sizepa && input_sizepara ==-1
+if mass_density(ResolutionMap(delt(1)))>sizepara && input_sizepara ==-1
     i=1;
     while  mass_density(ResolutionMap(delt(i)))>sizepara
         rec(i,1)=sortind(i);
